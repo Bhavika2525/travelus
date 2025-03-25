@@ -394,3 +394,28 @@ a {
 .pricing .more-btn:hover {
     color: var(--main-color);
 }
+
+
+
+
+
+/* Footer section  */
+
+.footer-sec {
+    padding: 50px 0;
+    background-color: #303030;
+    color: #fff;
+}
+
+.footer-title {
+    margin-bottom: 30px;
+}
+
+.contact-footer ul {
+    padding: 0;
+}
+
+.footer-about {
+    padding: 0 20px 0 0;
+    text-align: justify;
+}

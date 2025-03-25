@@ -65,7 +65,8 @@ a {
 }
 
 /* Dropdown Menu */
-.dropdown1, .dropdown2 {
+.dropdown1,
+.dropdown2 {
     position: absolute;
     background-color: #ffffff;
     list-style: none;
@@ -90,8 +91,8 @@ a {
 }
 
 /* Show Dropdown on Hover with Animation */
-.main-menu li:hover > .dropdown1,
-.main-menu li ul li:hover > .dropdown2 {
+.main-menu li:hover>.dropdown1,
+.main-menu li ul li:hover>.dropdown2 {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -336,4 +337,60 @@ a {
 
 .popular-inner {
     margin-bottom: 20px;
-  }
+}
+
+
+/* card Section  */
+
+.detail-sec {
+    padding: 20px;
+}
+
+.card-sec {
+    padding: 50px 0;
+}
+
+.img-sec img {
+    width: 100%;
+    height: auto;
+}
+
+.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+.include {
+    margin: 20px 0;
+}
+
+.include i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.card-box {
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(10, 10, 10, 0.12);
+    overflow: hidden;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing h4 {
+    font-size: 18px;
+    font-family: var(--font-text);
+}
+
+.pricing .more-btn {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pricing .more-btn:hover {
+    color: var(--main-color);
+}

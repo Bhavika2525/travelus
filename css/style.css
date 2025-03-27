@@ -24,7 +24,17 @@ a {
 }
 
 .header-main {
+    /* position: fixed; */
     background-color: #fff;
+    /* position: fixed;
+    right: 0;
+    left: 0;
+    background-color: #ffffff70;
+    border-radius: 50px;
+    top: 0;
+    z-index: 999;
+    margin: 0px 10px;
+    animation: scroll-transition; */
 }
 
 .header-inner {
@@ -39,6 +49,20 @@ a {
     list-style: none;
     margin: 0;
 }
+
+.sticky {
+    position: fixed;
+    right: 0;
+    left: 0;
+    background-color: #ffffffdf;
+    border-radius: 0px;
+    top: 0px;
+    margin: 0px;
+    z-index: 999999;
+    box-shadow: 0px 4px 10px #00000030;
+    transition: all 0.3s ease;
+}
+
 
 .main-menu li {
     padding: 0 15px;
@@ -466,6 +490,7 @@ a {
     padding: 20px 0;
     text-align: center;
 }
+
 .copyright-sec p {
     margin: 0;
     color: #fff;

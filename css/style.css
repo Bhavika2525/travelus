@@ -420,6 +420,71 @@ a {
 }
 
 
+/* testimonial section  */
+
+.testimonial-sec {
+    padding: 50px 0 80px 0;
+    background: url(../img/testimonial-bg.png);
+    background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.testimonial-box {
+    padding: 0 10px;
+    position: relative;
+}
+
+.testimonial {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    /* max-width: 360px; */
+    text-align: center;
+    min-height: 200px;
+}
+
+
+.testimonial-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+.testimonial-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+}
+
+.testimonial-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.testimonial-info {
+    text-align: left;
+}
+
+.testimonial-name {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.testimonial-job {
+    font-size: 10px;
+}
+
+
+/* pbf section  */
+
 
 
 

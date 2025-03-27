@@ -447,7 +447,99 @@
             </div>
         </div>
 
+        <!-- testimonial section  -->
 
+        <div class="testimonial-sec">
+            <div class="container">
+                <div class="main-heading">
+                    <h3>What our customers are saying <span>about us</span></h3>
+                    <!-- <a href="#" class="more-btn">All Destination <i class="fa-solid fa-arrow-right-long"></i></a> -->
+                </div>
+                <div class="testimonial-main">
+                    <div class="testimonial-box">
+                        <div class="testimonial">
+                            <p class="testimonial-text">
+                                Codecademy was perfect: we both really like learning by doing.
+                            </p>
+                            <div class="testimonial-details">
+                                <div class="testimonial-img">
+                                    <img src="img/testimonial-1.jpg" alt="Terrell O'Keefe" />
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">Terrell O'Keefe</h4>
+                                    <h5 class="testimonial-job">Marketing Professional</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-box">
+                        <div class="testimonial">
+                            <p class="testimonial-text">
+                                Codecademy was perfect: we both really like learning by doing.
+                            </p>
+                            <div class="testimonial-details">
+                                <div class="testimonial-img">
+                                    <img src="img/testimonial-1.jpg" alt="Terrell O'Keefe" />
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">Terrell O'Keefe</h4>
+                                    <h5 class="testimonial-job">Marketing Professional</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-box">
+                        <div class="testimonial">
+                            <p class="testimonial-text">
+                                Codecademy was perfect: we both really like learning by doing.
+                            </p>
+                            <div class="testimonial-details">
+                                <div class="testimonial-img">
+                                    <img src="img/testimonial-1.jpg" alt="Terrell O'Keefe" />
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">Terrell O'Keefe</h4>
+                                    <h5 class="testimonial-job">Marketing Professional</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-box">
+                        <div class="testimonial">
+                            <p class="testimonial-text">
+                                Codecademy was perfect: we both really like learning by doing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, ex?
+                            </p>
+                            <div class="testimonial-details">
+                                <div class="testimonial-img">
+                                    <img src="img/testimonial-1.jpg" alt="Terrell O'Keefe" />
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">Terrell O'Keefe</h4>
+                                    <h5 class="testimonial-job">Marketing Professional</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-box">
+                        <div class="testimonial">
+                            <p class="testimonial-text">
+                                Codecademy was perfect: we both really like learning by doing.
+                            </p>
+                            <div class="testimonial-details">
+                                <div class="testimonial-img">
+                                    <img src="img/testimonial-1.jpg" alt="Terrell O'Keefe" />
+                                </div>
+                                <div class="testimonial-info">
+                                    <h4 class="testimonial-name">Terrell O'Keefe</h4>
+                                    <h5 class="testimonial-job">Marketing Professional</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
         <!-- Footer section  -->
 
@@ -532,7 +624,36 @@
             arrows: true,
         });
     </script>
-
+    <script>
+        $('.testimonial-main').slick({
+            // centerMode: true,
+            // centerPadding: '60px',
+            slidesToScroll: 1,
+            slidesToShow: 3,
+            autoplay: true,
+            arrows:false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        // centerMode: true,
+                        // centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        // centerMode: true,
+                        // centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
 
 
 

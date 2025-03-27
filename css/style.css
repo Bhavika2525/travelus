@@ -426,8 +426,8 @@ a {
     padding: 50px 0 80px 0;
     background: url(../img/testimonial-bg.png);
     background-size: contain;
-  background-repeat: repeat;
-  background-position: center;
+    background-repeat: repeat;
+    background-position: center;
 }
 
 .testimonial-box {
@@ -485,7 +485,20 @@ a {
 
 /* pbf section  */
 
+.pbf-section {
+    padding: 90px 0;
+}
 
+.pbf-box {
+    display: flex;
+    padding: 0 10px;
+}
+
+.pbf-box img {
+    width: 70px;
+    height: 70px;
+    margin: 0 14px 0 0;
+}
 
 
 /* Footer section  */

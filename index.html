@@ -28,10 +28,9 @@
             <div class="container">
                 <div class="header-inner">
                     <div class="logo">
-                        <!-- <img src="logo.png" alt="logo" /> -->
                         <h2>Travel<span>us</span></h2>
                     </div>
-                    <nav class="nav-bar">
+                    <nav class="nav-bar d-none d-lg-block">
                         <ul class="main-menu">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Pages</a>
@@ -56,12 +55,52 @@
                             <li><a href="#">Contact Us</a></li>
                         </ul>
                     </nav>
-                    <div class="btn-sec">
-                        <a href="#" class="loginbtn">Login</a>
-                    </div>
+                    <button class="menu-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
             </div>
         </header>
+    
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasMenuLabel">Travelus</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="offcanvas-menu">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a class="dropdown-toggle" data-bs-toggle="collapse" href="#pagesCollapse" role="button" aria-expanded="false" aria-controls="pagesCollapse">
+                            Pages
+                        </a>
+                        <ul class="offcanvas-dropdown collapse" id="pagesCollapse">
+                            <li>
+                                <a class="dropdown-toggle" data-bs-toggle="collapse" href="#page1Collapse" role="button" aria-expanded="false" aria-controls="page1Collapse">
+                                    Page1
+                                </a>
+                                <ul class="offcanvas-dropdown collapse" id="page1Collapse">
+                                    <li><a href="#">Page sub 1</a></li>
+                                    <li><a href="#">Page sub 2</a></li>
+                                    <li><a href="#">Page sub 3</a></li>
+                                    <li><a href="#">Page sub 4</a></li>
+                                    <li><a href="#">Page sub 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Page2</a></li>
+                            <li><a href="#">Page3</a></li>
+                            <li><a href="#">Page4</a></li>
+                            <li><a href="#">Page5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Tour List</a></li>
+                    <li><a href="#">Room List</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    
 
         <!-- Hero Section -->
         <div class="hero-sec">
@@ -695,7 +734,61 @@
     </script>
 
 
-
+<script>
+    // Initialize dropdown toggles
+    document.addEventListener('DOMContentLoaded', function() {
+        // For desktop dropdowns
+        const dropdownItems = document.querySelectorAll('.main-menu > li');
+        
+        dropdownItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const dropdown = this.querySelector('.dropdown1');
+                if (dropdown) {
+                    dropdown.style.opacity = '1';
+                    dropdown.style.visibility = 'visible';
+                    dropdown.style.transform = 'translateY(0)';
+                }
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                const dropdown = this.querySelector('.dropdown1');
+                if (dropdown) {
+                    dropdown.style.opacity = '0';
+                    dropdown.style.visibility = 'hidden';
+                    dropdown.style.transform = 'translateY(10px)';
+                }
+            });
+        });
+        
+        // For mobile dropdowns
+        const mobileDropdownToggles = document.querySelectorAll('.offcanvas-menu .dropdown-toggle');
+        
+        mobileDropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                
+                // Close other dropdowns at the same level
+                const parentItem = this.closest('li');
+                const siblingItems = parentItem.parentElement.querySelectorAll('li');
+                
+                siblingItems.forEach(sibling => {
+                    if (sibling !== parentItem) {
+                        const siblingToggle = sibling.querySelector('.dropdown-toggle');
+                        if (siblingToggle && siblingToggle !== this) {
+                            const siblingTargetId = siblingToggle.getAttribute('href');
+                            const siblingTarget = document.querySelector(siblingTargetId);
+                            if (siblingTarget) {
+                                siblingTarget.classList.remove('show');
+                                siblingToggle.setAttribute('aria-expanded', 'false');
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    });
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
